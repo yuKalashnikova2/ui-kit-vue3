@@ -1,5 +1,5 @@
 <script setup>
-import Pagination from './components/Pagination.vue';
+
 </script>
 
 <template>
@@ -7,7 +7,7 @@ import Pagination from './components/Pagination.vue';
     <div class="wrapper">
       <h1>Vue 3</h1>
     <div>
-    <Pagination />
+      <RouterView />
     </div>
     </div>
 
@@ -20,6 +20,7 @@ import Pagination from './components/Pagination.vue';
     background-color: #FFF;
     border-radius: 12px;
     width: 1280px;
+    height: 100vh;
 
   }
   .wrapper {

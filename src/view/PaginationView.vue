@@ -1,0 +1,22 @@
+<script setup>
+import { ref } from 'vue'
+import Pagination from '../components/Pagination.vue'
+
+const currentPage = ref(1)
+const totalPages = ref([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
+const visiblePage = ref(5)
+
+const handleGoToPage = (page) => {
+  currentPage.value = page
+}
+</script>
+
+<template>
+  <Pagination
+    :currentPage="currentPage"
+    :totalPages="totalPages"
+    :visiblePage="visiblePage"
+    @goToPage="handleGoToPage"
+  />
+  <p>Текущая страница: {{ currentPage }}</p>
+</template>
