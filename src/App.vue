@@ -20,11 +20,12 @@
     background-color: #FFF;
     border-radius: 12px;
     width: 1280px;
-    height: 100vh;
+    /* height: 100vh; */
 
   }
   .wrapper {
     width: 80%;
     margin: 0 auto;
+    padding: 30px;
   }
 </style>
