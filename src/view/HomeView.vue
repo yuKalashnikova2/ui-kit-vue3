@@ -1,12 +1,29 @@
-<script>
-
-</script>
+<script></script>
 
 <template>
-  <router-link to="/PaginationView">
-    <h2>Pagination</h2>
-  </router-link>
-  <router-link to="/CarouselView">
-    <h2>Carousel</h2>
-  </router-link>
+    <div class="home">
+        <div>
+            <router-link to="/PaginationView">
+                <h2>Pagination</h2>
+            </router-link>
+            <router-link to="/CarouselView">
+                <h2>Carousel</h2>
+            </router-link>
+        </div>
+        <div>
+            <p class="home__descr">
+                In our UI Kit for Vue 3 you will find many necessary and
+                original ready-made solutions for your project.
+            </p>
+        </div>
+    </div>
 </template>
+<style lang="scss" scoped>
+.home {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    &__descr {
+        font-weight: 700;
+    }
+}
+</style>

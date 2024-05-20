@@ -37,6 +37,7 @@ const nextPage = () => {
 const visiblePages = computed(() => {
       const start = Math.max(props.currentPage - 2, 0)
       const end = Math.min(props.currentPage + 2, props.totalPages.length + 1)
+      
       return props.totalPages.slice(start, end)
     })
 
@@ -52,10 +53,10 @@ const emit = defineEmits(['goToPage'])
     </button>
 
     <!-- <span v-if="totalPages.length > 4" class="pagination__item" @click="goToPage(1)">1</span> -->
-    <span v-if="visiblePages[0] > 2" class="pagination__item">...</span>
+    <!-- <span v-if="visiblePages[0] > 2" class="pagination__item">...</span> -->
     <div
       v-for="page in visiblePages.slice(0, 3)"
-      :key="page === '...'"
+      :key="page"
       :class="[
         'pagination__item',
         page === currentPage ? 'pagination__item_active' : '',
@@ -65,8 +66,8 @@ const emit = defineEmits(['goToPage'])
       {{ page }}
     </div>
 
-
-    <span v-if="visiblePages[visiblePages.length - 1] < totalPages.length - 3" class="pagination__item pagination__item__dots">...</span>
+<!-- 
+    <span v-if="visiblePages[visiblePages.length - 1] < totalPages.length - 2" class="pagination__item pagination__item__dots">...</span> -->
     <!-- <span v-if="totalPages.length > 1" class="pagination__item" @click="goToPage(totalPages.length)">{{ totalPages.length }}</span> -->
     <button class="pagination__item" @click="nextPage">
       <img src="/next.svg" alt="prev" />
@@ -83,6 +84,7 @@ const emit = defineEmits(['goToPage'])
     border: 1px solid rgb(203, 213, 225);
     color: rgb(51, 65, 85);
     background-color: #fff;
+    width: 50px;
     &:hover {
       background-color: rgb(231, 235, 240);
       cursor: pointer;
