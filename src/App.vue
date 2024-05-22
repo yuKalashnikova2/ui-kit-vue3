@@ -29,7 +29,7 @@ import Header from './components/Header.vue'
     margin: 0 auto;
     background-color: #FFF;
     border-radius: 12px;
-    width: 1280px;
+    max-width: 1280px;
     /* height: 100vh; */
 
   }
@@ -37,6 +37,9 @@ import Header from './components/Header.vue'
     width: 80%;
     margin: 0 auto;
     padding: 30px;
+    @media(max-width: 992px) {
+      width: 100%;
+    }
   }
 
 </style>

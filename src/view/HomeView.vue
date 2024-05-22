@@ -9,6 +9,9 @@
             <router-link to="/CarouselView">
                 <h2>Carousel</h2>
             </router-link>
+            <router-link to="/InputDubbleView">
+                <h2>Input Dubble</h2>
+            </router-link>
         </div>
         <div>
             <p class="home__descr">
