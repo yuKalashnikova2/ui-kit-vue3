@@ -6,16 +6,6 @@ import Header from './components/Header.vue'
   <div class="container">
     <div class="wrapper">
       <Header />
-      <!-- <div class="header">  
-        <router-link to="/">
-          <button>
-            <img src="/back.svg" alt="come-back">
-          </button>
-        </router-link>
-        <h1>Vue 3</h1>
-        
-      </div> -->
-
     <div>
       <RouterView />
     </div>
@@ -30,7 +20,7 @@ import Header from './components/Header.vue'
     background-color: #FFF;
     border-radius: 12px;
     max-width: 1280px;
-    /* height: 100vh; */
+  height: 100vh;
 
   }
   .wrapper {

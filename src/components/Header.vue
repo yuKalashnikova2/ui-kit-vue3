@@ -30,8 +30,14 @@
       border-radius: 8px;
       border: none;
       cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       &:hover {
         opacity: 0.8;
+      }
+      & img {
+        width: 100%;
       }
     }
     &__flex {
@@ -39,7 +45,6 @@
         grid-template-columns: 1fr 2fr;
     }
     &__title {
- 
       font-weight: 700;
       font-size: 30px;
       color:#42b883;
