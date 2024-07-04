@@ -12,11 +12,14 @@ const handleGoToPage = (page) => {
 </script>
 
 <template>
-  <Pagination
+         <div class="ml-70">
+          <Pagination
     :currentPage="currentPage"
     :totalPages="totalPages"
     :visiblePage="visiblePage"
     @goToPage="handleGoToPage"
   />
   <p>Текущая страница: {{ currentPage }}</p>
+         </div>
+
 </template>

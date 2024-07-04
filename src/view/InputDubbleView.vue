@@ -3,5 +3,8 @@ import InputDoubleRange from '../components/InputDoubleRange.vue'
 </script>
 
 <template>
-    <InputDoubleRange />
+       <div class="ml-70">
+        <InputDoubleRange />
+       </div>
+
 </template>

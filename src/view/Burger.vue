@@ -3,5 +3,8 @@ import Burger from '../components/Burger.vue'
 </script>
 
 <template>
-    <Burger />
+        <div class="ml-70">
+            <Burger />
+        </div>
+
 </template>

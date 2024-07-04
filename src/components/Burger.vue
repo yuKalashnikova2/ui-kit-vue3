@@ -41,7 +41,7 @@ const isVisible = ref(false)
     &__header {
         background-color: #646cff;
         padding: 20px 10px;
-        z-index: 10;
+        z-index: 4;
         overflow-y: hidden;
         position: relative;
     }

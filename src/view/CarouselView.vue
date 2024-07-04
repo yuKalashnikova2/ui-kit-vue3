@@ -3,5 +3,8 @@ import Carousel from '../components/carousel/Carousel.vue'
 </script>
 
 <template>
-    <Carousel />
+    <div class="ml-70">
+        <Carousel />
+    </div>
+
 </template>

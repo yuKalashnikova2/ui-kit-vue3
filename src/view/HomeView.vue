@@ -2,7 +2,7 @@
 
 <template>
     <div class="home">
-        <div>
+        <!-- <div>
             <router-link to="/PaginationView">
                 <h2>Pagination</h2>
             </router-link>
@@ -15,7 +15,10 @@
             <router-link to="/Burger">
                 <h2>Burger</h2>
             </router-link>
-        </div>
+        </div> -->
+        <h2 class="home__title">
+      Welcome to UI Kit for Vue 3!
+    </h2>
         <div>
             <p class="home__descr">
                 In our UI Kit for Vue 3 you will find many necessary and
@@ -26,10 +29,15 @@
 </template>
 <style lang="scss" scoped>
 .home {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
+    display: block;
+    margin-left: 70px;
     &__descr {
         font-weight: 700;
+    }
+    &__title {
+      font-weight: 700;
+      font-size: 30px;
+      color:#42b883;
     }
 }
 </style>
