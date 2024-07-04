@@ -13,9 +13,6 @@
 a {
   font-weight: 500;
   color:#646cff;
-  /* color: #774BB5; */
-  /* color: #A27ADA; */
-  /* color: #646cff; */
   text-decoration: inherit;
 }
 a:hover {
@@ -26,10 +23,6 @@ a:hover {
 }
 
 body {
-  /* margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px; */
   min-height: 100vh;
   background-color: #42b883;
 }
@@ -41,5 +34,14 @@ h1 {
 
 button {
   border: none;
-
+}
+.ml-70 {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+@media (max-width: 600px) {
+  .ml-70 {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
 }

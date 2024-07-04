@@ -74,7 +74,6 @@ const isVisible = ref(false)
         position: relative;
         z-index: 5;
         align-items: center;
-        // background-color: rgb(71, 212, 165);
         border: none;
         outline: none;
         width: 30px;

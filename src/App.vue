@@ -1,23 +1,28 @@
 <script setup>
-// import { ref } from 'vue'
 import { ref } from 'vue'
-import TopHeader from './components/TopHeader.vue';
+import TopHeader from './components/TopHeader.vue'
+import Burger from './components/Burger.vue';
 import SideBar from './components/SideBar.vue'
 const isOpen = ref(false)
 const handleOpen = () => {
   isOpen.value = !isOpen.value
 }
-// const f = ref(false)
-// const handleOpen = (isOpen) => {
-//   f.value = isOpen
-
-// }
 </script>
 
 <template>
   <div class="container">
     <TopHeader />
     <div class="wrapper">
+      <div class="sidebar__header"
+      :class="{ 'sidebar__header_open': isOpen }">
+        <router-link to="/">
+                <div class="sidebar__logo">
+                    <img src="/vue.svg" alt="vue" />
+                </div>
+            </router-link>
+            <div class="sidebar__mobile">
+              <!-- <Burger /> -->
+            </div>
       <div class="sidebar__button"
       :class="{ 'sidebar__button_open': isOpen }">
         <button  @click="handleOpen" >
@@ -25,6 +30,7 @@ const handleOpen = () => {
       </button>
       </div>
     
+      </div>
       <SideBar :isOpen="isOpen" />
     <div :class="['content', isOpen ? 'content__open' : '']"
     >
@@ -39,19 +45,12 @@ const handleOpen = () => {
   .container {
     margin: 0 auto;
     background-color: #FFF;
-    max-width: 1280px;
+    // max-width: 1280px;
     height: 100vh;
 
   }
   .wrapper {
-    // width: 80%;
-    // display: flex;
-    // position: relative;
-    // margin: 0 auto;ds
-    // padding: 30px;
-    // display: grid;
-    // grid-template-columns: 1fr 3fr;
-    // grid-gap: 20px;
+ 
     @media(max-width: 992px) {
       width: 100%;
     }
@@ -59,8 +58,15 @@ const handleOpen = () => {
   .content {
     margin-left: 70px;
     transition: all 0.5s ease-in-out;
+    @media(max-width: 768px) {
+      margin-left: 0;
+      margin-top: 2rem;
+    }
     &__open {
       margin-left: 300px;
+      @media(max-width: 768px) {
+      margin-left: 0;
+    }
     }
   }
   button {
@@ -76,32 +82,65 @@ const handleOpen = () => {
         align-items: center;
         transition: all 0.5s ease-in-out;
         z-index: 9;
+        @media(max-width: 768px) {
+            display: none;
+        }
         &:hover {
             opacity: 0.8;
         }
         & img {
             width: 100%;
+            @media(max-width: 768px) {
+                    transform: rotate(90deg);
+                }
         }
         &.open {
-          // margin-left: 250px;
+          margin-left: 250px;
             & img {
                 transform: rotate(180deg);
+               
             }
         }
     }
     .sidebar__button {
-      background-color: #1e293b;
-      width: 50px;
-      padding: 10px;
       transition: all 0.5s ease-in-out;
       &_open {
-        padding-left: 290px;
-        // width: 250px;
-        // transition: all 0.5s ease-in-out;
         & img {
                 transform: rotate(180deg);
+                @media(max-width: 768px) {
+                    transform: rotate(90deg);
+                }
             }
         
       }
     }
+  .sidebar__header {
+    background-color: #1e293b;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 300px;
+    padding-left: 1rem;
+    padding-top: 0.5rem;
+    padding-right: 0.5rem;
+    transform: translateX(-250px);
+    transition: all 0.5s ease-in-out;
+    @media(max-width: 768px) {
+      width: 100%;
+      transform: translateX(0);
+      padding-right: 1rem;
+      padding-bottom: 0.5rem;
+      transition: none;
+    }
+    &_open {
+      transform: translateX(0);
+
+    }
+  }
+  .sidebar__mobile {
+    display: none;
+    @media(max-width: 768px) {
+      display: block;
+    }
+  }
 </style>

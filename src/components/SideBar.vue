@@ -5,29 +5,10 @@ const props = defineProps({
         default: false,
     },
 })
-// import { ref } from 'vue'
-// const isOpen = ref(false)
-// const emit = defineEmits(['open'])
-// const handleOpen = (isOpen) => {
-//     isOpen.value = !isOpen.value
-//     console.log('вот  тут запук', isOpen.value)
-// }
 </script>
 
 <template>
     <div :class="['sidebar', isOpen ? 'sidebar__open' : '']">
-        <div class="sidebar__header">
-            <router-link to="/">
-                <div class="sidebar__logo">
-                    <img src="../assets/vue.svg" alt="vue" />
-                </div>
-            </router-link>
-
-            <!-- <button :class="{ open: isOpen }" >
-                <img src="/right_arrow.svg" alt="come-back" />
-            </button> -->
-        </div>
-
         <div class="sidebar__links">
             <router-link to="/PaginationView">
                 <h2>Pagination</h2>
@@ -58,12 +39,11 @@ const props = defineProps({
     flex-direction: column;
     min-height: 100vh;
     transition: all 0.5s ease-in-out;
+    @media(max-width: 768px) {
+        display: none;
+    }
     &__open {
         transform: translateX(0px);
-    }
-    &__header {
-        display: flex;
-        justify-content: space-between;
     }
     &__logo {
         width: 30px;
@@ -96,6 +76,9 @@ const props = defineProps({
         }
     }
     &__links {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
         & a {
             color: #fff;
         }
