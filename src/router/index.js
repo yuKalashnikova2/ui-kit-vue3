@@ -5,6 +5,7 @@ import PaginationView from '../view/PaginationView.vue'
 import CarouselView from '../view/CarouselView.vue'
 import InputDubbleView from '../view/InputDubbleView.vue'
 import Burger from '../view/Burger.vue'
+import Accordion from '../view/Accordion.vue'
 const router = createRouter({
     history: createWebHistory(import.meta.env.BASE_URL),
     routes: [
@@ -13,6 +14,7 @@ const router = createRouter({
         { path: '/carouselview', component: CarouselView },
         { path: '/inputdubbleview', component: InputDubbleView },
         { path: '/burger', component: Burger },
+        { path: '/accordion', component: Accordion },
     ],
 })
 

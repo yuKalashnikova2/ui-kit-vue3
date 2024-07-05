@@ -22,6 +22,9 @@ const props = defineProps({
             <router-link to="/Burger">
                 <h2>Burger</h2>
             </router-link>
+            <router-link to="/Accordion">
+                <h2>Accordion</h2>
+            </router-link>
         </div>
     </div>
 </template>

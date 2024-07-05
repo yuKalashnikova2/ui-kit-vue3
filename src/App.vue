@@ -34,9 +34,13 @@ const linksMenu = ref([
         name: 'Input Dubble',
         path: '/InputDubbleView',
     },
+    {
+      id: 6,
+      name: 'Accordion',
+      path: '/Accordion',
+    }
 ])
 
-// const isVisible = ref(false)
 </script>
 
 <template>
