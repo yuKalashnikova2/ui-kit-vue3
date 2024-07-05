@@ -15,6 +15,9 @@
         align-items: center;
         z-index: 1;
         position: relative;
+        @media(max-width: 768px) {
+            display: none;
+        }
         & a {
             color: #42b883;
         }

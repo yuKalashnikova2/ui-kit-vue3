@@ -1,5 +1,12 @@
 <script setup>
 import { ref } from 'vue'
+const props = defineProps({
+    isDark: {
+        type: Boolean,
+        default: false,
+    },
+})
+
 
 const list = ref(['Home', 'About', 'Services', 'Blog', 'Contact'])
 
@@ -7,9 +14,10 @@ const isVisible = ref(false)
 </script>
 
 <template>
-    <h2>Burger</h2>
+
     <div class="burger__wrapper">
-        <header class="burger__header">
+        <header class="burger__header"
+        :class="{ 'burger__header_bg-black': isDark }">
             <div
                 class="burger__button"
                 :class="{ open: isVisible }"
@@ -44,6 +52,9 @@ const isVisible = ref(false)
         z-index: 4;
         overflow-y: hidden;
         position: relative;
+        &_bg-black {
+            background-color: #1e293b;
+        }
     }
     &__nav {
         background-color: #cdcff1;
