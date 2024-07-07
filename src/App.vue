@@ -22,7 +22,7 @@ const linksMenu = ref([
     {
         id: 3,
         name: 'Burger',
-        path: '/Burger',
+        path: '/BurgerView',
     },
     {
         id: 4,
@@ -37,8 +37,24 @@ const linksMenu = ref([
     {
       id: 6,
       name: 'Accordion',
-      path: '/Accordion',
-    }
+      path: '/AccordionView',
+    },
+    {
+        id: 7,
+        name: 'Marquee',
+        path: '/marqueeview',
+    },
+    {
+        id: 7,
+        name: 'Modal',
+        path: '/modalview',
+    },
+    {
+        id: 8,
+        name: 'Progress Bar',
+        path: '/progressview',
+    },
+
 ])
 
 </script>

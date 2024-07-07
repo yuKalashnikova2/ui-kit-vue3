@@ -8,6 +8,8 @@ import BurgerView from '../view/BurgerView.vue'
 import AccordionView from '../view/AccordionView.vue'
 import MarqueeView from '../view/MarqueeView.vue'
 import ModalView from '../view/ModalView.vue'
+import ProgressView from '../view/ProgressView.vue'
+
 const router = createRouter({
     history: createWebHistory(import.meta.env.BASE_URL),
     routes: [
@@ -19,6 +21,7 @@ const router = createRouter({
         { path: '/accordionview', component: AccordionView },
         { path: '/marqueeview', component: MarqueeView },
         { path: '/modalview', component: ModalView },
+        { path: '/progressview', component: ProgressView },
     ],
 })
 

@@ -31,6 +31,9 @@ const props = defineProps({
             <router-link to="/modalview">
                 <h2>Modal</h2>
             </router-link>
+            <router-link to="/progressview">
+                <h2>Progress Bar</h2>
+            </router-link>
         </div>
     </div>
 </template>
@@ -48,6 +51,9 @@ const props = defineProps({
     flex-direction: column;
     min-height: 100vh;
     transition: all 0.5s ease-in-out;
+    & h2 {
+        font-size: 22px;
+    }
     @media(max-width: 768px) {
         display: none;
     }
@@ -87,10 +93,19 @@ const props = defineProps({
     &__links {
         display: flex;
         flex-direction: column;
-        gap: 1.5rem;
+        gap: 0.5rem;
+      
         & a {
             color: #fff;
+            text-decoration: none;
+            padding: 0.5rem;
+            border-radius: 8px;
+            &:hover {
+                background-color: rgba(53, 73, 94, 0.6)  ;
+            
         }
+        }
+       
     }
 }
 </style>
