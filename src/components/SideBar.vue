@@ -34,6 +34,9 @@ const props = defineProps({
             <router-link to="/progressview">
                 <h2>Progress Bar</h2>
             </router-link>
+            <router-link to="/tabsview">
+                <h2>Tabs</h2>
+            </router-link>
         </div>
     </div>
 </template>

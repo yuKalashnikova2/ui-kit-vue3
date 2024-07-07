@@ -9,7 +9,7 @@ import AccordionView from '../view/AccordionView.vue'
 import MarqueeView from '../view/MarqueeView.vue'
 import ModalView from '../view/ModalView.vue'
 import ProgressView from '../view/ProgressView.vue'
-
+import TabsView from '../view/TabsView.vue'
 const router = createRouter({
     history: createWebHistory(import.meta.env.BASE_URL),
     routes: [
@@ -22,6 +22,7 @@ const router = createRouter({
         { path: '/marqueeview', component: MarqueeView },
         { path: '/modalview', component: ModalView },
         { path: '/progressview', component: ProgressView },
+        { path: '/tabsview', component: TabsView },
     ],
 })
 
