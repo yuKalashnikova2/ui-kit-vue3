@@ -19,12 +19,16 @@ const props = defineProps({
             <router-link to="/InputDubbleView">
                 <h2>Input Dubble</h2>
             </router-link>
-            <router-link to="/Burger">
+            <router-link to="/BurgerView">
                 <h2>Burger</h2>
             </router-link>
-            <router-link to="/Accordion">
+            <router-link to="/AccordionView">
                 <h2>Accordion</h2>
             </router-link>
+            <router-link to="/marqueeview">
+                <h2>Marquee</h2>
+            </router-link>
+          
         </div>
     </div>
 </template>

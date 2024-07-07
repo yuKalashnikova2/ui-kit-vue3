@@ -4,8 +4,9 @@ import HomeView from '../view/HomeView.vue'
 import PaginationView from '../view/PaginationView.vue'
 import CarouselView from '../view/CarouselView.vue'
 import InputDubbleView from '../view/InputDubbleView.vue'
-import Burger from '../view/Burger.vue'
-import Accordion from '../view/Accordion.vue'
+import BurgerView from '../view/BurgerView.vue'
+import AccordionView from '../view/AccordionView.vue'
+import MarqueeView from '../view/MarqueeView.vue'
 const router = createRouter({
     history: createWebHistory(import.meta.env.BASE_URL),
     routes: [
@@ -13,8 +14,9 @@ const router = createRouter({
         { path: '/paginationview', component: PaginationView },
         { path: '/carouselview', component: CarouselView },
         { path: '/inputdubbleview', component: InputDubbleView },
-        { path: '/burger', component: Burger },
-        { path: '/accordion', component: Accordion },
+        { path: '/burgerview', component: BurgerView },
+        { path: '/accordionview', component: AccordionView },
+        { path: '/marqueeview', component: MarqueeView },
     ],
 })
 
