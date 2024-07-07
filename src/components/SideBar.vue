@@ -28,7 +28,9 @@ const props = defineProps({
             <router-link to="/marqueeview">
                 <h2>Marquee</h2>
             </router-link>
-          
+            <router-link to="/modalview">
+                <h2>Modal</h2>
+            </router-link>
         </div>
     </div>
 </template>
