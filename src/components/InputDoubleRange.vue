@@ -36,7 +36,6 @@ onMounted(() => {
 </script>
 
 <template>
-    <h2>Dubble Input Range Component</h2>
     <div class="wrapper">
         <div class="values">
             <span id="range1">{{ valueOne }}</span>

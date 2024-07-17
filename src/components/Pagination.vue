@@ -45,8 +45,6 @@ const emit = defineEmits(['goToPage'])
 </script>
 
 <template>
-  <h2>Pagination Component</h2>
-
   <div class="pagination">
     <button class="pagination__item" @click="prevPage">
       <img src="/prev.svg" alt="prev" />

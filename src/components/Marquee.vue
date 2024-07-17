@@ -31,6 +31,7 @@ const stylesMarquee = (color, size) => {
     line-height: 1.3;
     font-weight: bold;
     padding-top: 2rem;
+    padding-bottom: 2rem;
 }
 
 @keyframes marquee {

@@ -63,8 +63,6 @@ onBeforeMount(() => {
 </script>
 
 <template>
-    <h2>Carousel Component</h2>
-
     <div class="carousel">
         <div class="carousel__inner">
             <CarouselDots

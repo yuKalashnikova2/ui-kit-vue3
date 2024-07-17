@@ -17,11 +17,12 @@ const isVisible = ref(false)
 
     <div class="burger__wrapper">
         <header class="burger__header"
+        @click="isVisible = !isVisible"
         :class="{ 'burger__header_bg-black': isDark }">
             <div
                 class="burger__button"
                 :class="{ open: isVisible }"
-                @click="isVisible = !isVisible"
+             
             >
                 <span></span>
                 <span></span>
@@ -52,6 +53,7 @@ const isVisible = ref(false)
         z-index: 4;
         overflow-y: hidden;
         position: relative;
+        cursor: pointer;
         &_bg-black {
             background-color: #1e293b;
         }

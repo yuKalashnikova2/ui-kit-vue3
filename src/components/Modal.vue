@@ -85,7 +85,7 @@ const modalClosed = ref(false)
     }
     &__show {
         width: 150px;
-        font-size: 2rem;
+        font-size: 1.3rem;
     }
 }
 .v-leave-active {
